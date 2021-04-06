@@ -24,6 +24,11 @@ async def on_message(message: discord.Message):
             stringi = str(random.randint(1,100))
             await message.channel.send(stringi)
 
+    if message.content == "!hax":
+        with open ("haxor.png", "rb") as f:
+            picture = discord.File(f)
+            await message.channel.send(file=picture)
+
 
 
 client.run(os.environ.get("TOKEN"))
